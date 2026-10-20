@@ -1,0 +1,25 @@
+[package]
+name = "vault"
+version = "0.1.0"
+description = "Educational SOL vault built with Anchor and PDAs"
+authors = ["muhmdtamam"]
+edition = "2021"
+license = "MIT"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "vault"
+
+[features]
+default = []
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+no-idl-build = []
+no-log-ix-name = []
+idl-build = ["anchor-lang/idl-build"]
+anchor-debug = []
+custom-heap = []
+custom-panic = []
+
+[dependencies]
+anchor-lang = "0.31.1"
