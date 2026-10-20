@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="780" viewBox="0 0 900 780" font-family="Segoe UI, Helvetica, Arial, sans-serif" role="img" aria-label="Anchor SOL Vault: PDA vault with owner-only deposit and withdraw">
+  <title>Anchor SOL Vault</title>
+  <style>
+    .dash { animation: dash 0.8s linear infinite; }
+    @keyframes dash { to { stroke-dashoffset: -12; } }
+    @media (prefers-reduced-motion: reduce) {
+      .coin { display: none; }
+      .dash { animation: none; }
+    }
+  </style>
+
+  <rect x="0.5" y="0.5" width="899" height="779" rx="16" fill="#111a24" stroke="#2b3a4a"/>
+
+  <!-- Header -->
+  <g transform="translate(4,62) scale(1.8)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="20" y="24" width="56" height="50" rx="10" stroke="#aab6c3" stroke-width="4"/>
+    <circle cx="48" cy="49" r="11" stroke="#aab6c3" stroke-width="3.5"/>
+    <g stroke="#d4a64a" stroke-width="3">
+      <line x1="48" y1="33" x2="48" y2="38"/>
+      <line x1="48" y1="60" x2="48" y2="65"/>
+      <line x1="32" y1="49" x2="37" y2="49"/>
+      <line x1="59" y1="49" x2="64" y2="49"/>
+    </g>
+    <circle cx="48" cy="49" r="3" fill="#d4a64a" stroke="none"/>
+    <path d="M30 74v6M66 74v6" stroke="#aab6c3" stroke-width="4"/>
+  </g>
+  <text x="196" y="104" font-size="48" font-weight="800" fill="#e8edf2">Anchor SOL Vault</text>
+  <text x="198" y="140" font-size="18" fill="#aab6c3">PDAs, CPIs and owner-only access on Solana, explained in code.</text>
+  <text x="198" y="176" font-size="15" fill="#aab6c3">Rust and Anchor 0.31.1, MIT license</text>
+  <text x="198" y="212" font-size="13" fill="#8a98a8">by muhmdtamam, developer and main contributor</text>
+
+  <line x1="40" y1="252" x2="860" y2="252" stroke="#2b3a4a"/>
+
+  <!-- Fitur: tiga kolom terbuka, tanpa kartu -->
+  <g transform="translate(40,284)">
+    <g transform="translate(-18,0) scale(0.8)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="34" cy="48" r="12" stroke="#aab6c3" stroke-width="4"/>
+      <circle cx="34" cy="48" r="3" fill="#d4a64a" stroke="none"/>
+      <path d="M46 48H78M68 48V58M76 48V56" stroke="#aab6c3" stroke-width="4"/>
+    </g>
+    <text x="0" y="98" font-size="17" font-weight="700" fill="#e8edf2">PDA-bound vault</text>
+    <text x="0" y="118" font-size="13" fill="#8a98a8">One deterministic vault per wallet,</text>
+    <text x="0" y="135" font-size="13" fill="#8a98a8">derived from ["vault", owner].</text>
+  </g>
+
+  <g transform="translate(320,284)">
+    <g transform="translate(-18,0) scale(0.8)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M48 16L74 26V47C74 64 62 75 48 82C34 75 22 64 22 47V26Z" stroke="#aab6c3" stroke-width="4"/>
+      <path d="M36 49L45 58L62 39" stroke="#d4a64a" stroke-width="5"/>
+    </g>
+    <text x="0" y="98" font-size="17" font-weight="700" fill="#e8edf2">Owner-only access</text>
+    <text x="0" y="118" font-size="13" fill="#8a98a8">has_one and Signer block everyone</text>
+    <text x="0" y="135" font-size="13" fill="#8a98a8">except the vault owner.</text>
+  </g>
+
+  <g transform="translate(600,284)">
+    <g transform="translate(-21,0) scale(0.8)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="26" y="22" width="44" height="58" rx="8" stroke="#aab6c3" stroke-width="4"/>
+      <rect x="38" y="15" width="20" height="11" rx="4" fill="#111a24" stroke="#aab6c3" stroke-width="3.5"/>
+      <path d="M33 40L37 44L43 36M33 52L37 56L43 48M33 64L37 68L43 60" stroke="#d4a64a" stroke-width="3"/>
+      <path d="M49 40H63M49 52H63M49 64H63" stroke="#aab6c3" stroke-width="3.5"/>
+    </g>
+    <text x="0" y="98" font-size="17" font-weight="700" fill="#e8edf2">Tested end to end</text>
+    <text x="0" y="118" font-size="13" fill="#8a98a8">TypeScript tests cover deposits,</text>
+    <text x="0" y="135" font-size="13" fill="#8a98a8">withdrawals and attacks.</text>
+  </g>
+
+  <line x1="40" y1="448" x2="860" y2="448" stroke="#2b3a4a"/>
+
+  <!-- How it works -->
+  <g transform="translate(0,448)">
+    <text x="40" y="40" font-size="17" font-weight="700" fill="#e8edf2">How it works</text>
+
+    <rect x="40" y="64" width="220" height="108" rx="10" fill="#182430" stroke="#2b3a4a" stroke-width="1.5"/>
+    <text x="150" y="110" text-anchor="middle" font-size="20" font-weight="700" fill="#e8edf2">Owner wallet</text>
+    <text x="150" y="134" text-anchor="middle" font-size="13" fill="#8a98a8">signs every transaction</text>
+
+    <rect x="640" y="64" width="220" height="108" rx="10" fill="#182430" stroke="#2b3a4a" stroke-width="1.5"/>
+    <text x="750" y="110" text-anchor="middle" font-size="20" font-weight="700" fill="#e8edf2">Vault PDA</text>
+    <text x="750" y="134" text-anchor="middle" font-family="Consolas, Menlo, monospace" font-size="12" fill="#d4a64a">seeds: ["vault", owner]</text>
+
+    <!-- Deposit -->
+    <text x="450" y="83" text-anchor="middle" font-size="14" font-weight="600" fill="#d4a64a">deposit via CPI to System Program</text>
+    <path d="M270 99H618" stroke="#d4a64a" stroke-width="2.5" stroke-linecap="round"/>
+    <polygon points="630,99 618,92 618,106" fill="#d4a64a"/>
+    <circle class="coin" r="6" fill="#d4a64a">
+      <animateMotion dur="2.6s" begin="0s" repeatCount="indefinite" path="M270 99L620 99"/>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" dur="2.6s" begin="0s" repeatCount="indefinite"/>
+    </circle>
+    <circle class="coin" r="6" fill="#d4a64a">
+      <animateMotion dur="2.6s" begin="0.87s" repeatCount="indefinite" path="M270 99L620 99"/>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" dur="2.6s" begin="0.87s" repeatCount="indefinite"/>
+    </circle>
+    <circle class="coin" r="6" fill="#d4a64a">
+      <animateMotion dur="2.6s" begin="1.73s" repeatCount="indefinite" path="M270 99L620 99"/>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" dur="2.6s" begin="1.73s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Withdraw -->
+    <path d="M630 144H282" stroke="#d4a64a" stroke-width="2.5" stroke-linecap="round"/>
+    <polygon points="270,144 282,137 282,151" fill="#d4a64a"/>
+    <text x="450" y="168" text-anchor="middle" font-size="14" font-weight="600" fill="#d4a64a">withdraw, owner only</text>
+    <circle class="coin" r="6" fill="#d4a64a">
+      <animateMotion dur="2.6s" begin="0.4s" repeatCount="indefinite" path="M630 144L276 144"/>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" dur="2.6s" begin="0.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle class="coin" r="6" fill="#d4a64a">
+      <animateMotion dur="2.6s" begin="1.27s" repeatCount="indefinite" path="M630 144L276 144"/>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" dur="2.6s" begin="1.27s" repeatCount="indefinite"/>
+    </circle>
+    <circle class="coin" r="6" fill="#d4a64a">
+      <animateMotion dur="2.6s" begin="2.13s" repeatCount="indefinite" path="M630 144L276 144"/>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" dur="2.6s" begin="2.13s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Attacker: ditolak -->
+    <rect x="640" y="244" width="220" height="56" rx="10" fill="#2a1719" stroke="#e5534b" stroke-width="1.5"/>
+    <text x="750" y="278" text-anchor="middle" font-size="17" font-weight="700" fill="#ff9b94">Attacker wallet</text>
+    <path class="dash" d="M750 244V178" stroke="#e5534b" stroke-width="2.5" stroke-dasharray="6 6" stroke-linecap="round" fill="none"/>
+    <circle cx="750" cy="211" r="12" fill="#111a24" stroke="#e5534b" stroke-width="2"/>
+    <path d="M745 206L755 216M755 206L745 216" stroke="#e5534b" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="728" y="216" text-anchor="end" font-size="14" font-weight="700" fill="#ff9b94">Unauthorized</text>
+
+    <text x="40" y="278" font-size="13" fill="#8a98a8">Only the wallet stored in the vault can move SOL (has_one = owner).</text>
+  </g>
+</svg>
